@@ -1,6 +1,7 @@
-import shutil
+import os
 import math
 from concurrent.futures import ThreadPoolExecutor
+import system
 executor = ThreadPoolExecutor(max_workers=4)
 def SubmitTasktoThreadWITHLoadBuffer(task):
     future = executor.submit(task)
@@ -10,8 +11,7 @@ def SubmitTasktoThreadNOLoadBuffer(task):
     future = executor.submit(task)
     return future
 def LoadBuffer(future):
-    console_w = shutil.get_terminal_size().columns
-    console_h = shutil.get_terminal_size().lines
+    console_w = system.ConsoleWidth()
     console_parts = math.floor((console_w // 2) - 1.5)
     while future.done() != True:
         print(" " * console_parts + "--/" + " " * console_parts, end="\r")
@@ -20,3 +20,5 @@ def LoadBuffer(future):
         print(" " * console_parts + "--|" + " " * console_parts, end="\r")
     else:
         print(future)
+def PassCommandtoConsole(command):
+    os.system(command)
