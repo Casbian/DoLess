@@ -1,4 +1,5 @@
 import os
+import tkinter.messagebox
 from .system import ConsoleWidth
 def ClearConsole():
     os.system("cls")
@@ -21,3 +22,9 @@ def EnumeratedCenteredPrint(list):
     console_w = ConsoleWidth()
     for x,y in enumerate(list):
         print(x + y.center(console_w, " "))
+def CreateMessageboxInfo(title, message):
+    tkinter.messagebox.showinfo(title, message)
+def CreateMessageboxWarning(title, message):
+    tkinter.messagebox.showwarning(title, message)
+def CreateMessageboxError(title, message):
+    tkinter.messagebox.showerror(title, message)
