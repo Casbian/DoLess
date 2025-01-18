@@ -1,15 +1,15 @@
 
 ---
 
-**DoLess**  
-**Why work harder when you can DoLess?**  
+**CoreEase**  
+**Why work harder when you can CoreEase?**
 
-What is DoLess?  
-DoLess is a Python package designed for developers who want to avoid repetitive workflows, clunky threading, or verbose browser automation. It provides shortcuts for tasks like handling files, automating websites, and managing threads with ease.  
+### What is CoreEase?  
+CoreEase is a Python package designed for developers who want to avoid repetitive workflows, clunky threading, or verbose browser automation. It provides shortcuts for tasks like handling files, automating websites, and managing threads with ease.
 
 ---
 
-Features:  
+### Features:  
 1. **Thread Management**:  
    - Execute tasks in parallel with simple threading.  
    - Includes an animated load buffer to make you look productive.  
@@ -26,24 +26,30 @@ Features:
 
 ---
 
-Installation:  
-Install DoLess directly from GitHub using pip:  
+### Installation:  
+You can now install CoreEase directly from **PyPI** using pip:
 
 ```
-pip install git+https://github.com/Casbian/DoLess.git
+pip install CoreEase
 ```  
 
-This command installs DoLess directly from the repository to ensure you get the latest version.  
+Alternatively, if you want to install directly from GitHub to get the latest version:
+
+```
+pip install git+https://github.com/Casbian/CoreEase.git
+```  
+
+After uploading to **PyPI**, users will be able to install the package directly from there. 
 
 ---
 
-Quickstart Guide:  
+### Quickstart Guide:
 
 1. **Master Multithreading**  
-   Let DoLess handle thread management for you:  
+   Let CoreEase handle thread management for you:  
 
    ```python
-   from DoLess.threads import SubmitTasktoThreadWITHLoadBuffer
+   from CoreEase.threads import SubmitTasktoThreadWITHLoadBuffer
 
    def my_task():  
        print("Doing some important stuff...")
@@ -51,13 +57,13 @@ Quickstart Guide:
    SubmitTasktoThreadWITHLoadBuffer(my_task)
    ```  
 
-   Effortless threading with built-in buffering.  
+   Effortless threading with built-in buffering.
 
 2. **Browser Automation**  
    Automate web tasks with minimal effort:  
 
    ```python
-   from DoLess.web import StartBrowser, GoToUrl, ParseforLinks
+   from CoreEase.web import StartBrowser, GoToUrl, ParseforLinks
 
    StartBrowser()  
    GoToUrl("https://example.com")  
@@ -70,7 +76,7 @@ Quickstart Guide:
    Simplify file operations:  
 
    ```python
-   from DoLess.files import CheckFileExistence, CreateFile, AppendtoFile
+   from CoreEase.files import CheckFileExistence, CreateFile, AppendtoFile
 
    file_name = "example.txt"
 
@@ -84,26 +90,26 @@ Quickstart Guide:
    Keep your console clean and professional:  
 
    ```python
-   from DoLess.console import ClearConsole, CenteredPrint
+   from CoreEase.console import ClearConsole, CenteredPrint
 
    ClearConsole()  
-   CenteredPrint("Welcome to DoLess!", "*")
+   CenteredPrint("Welcome to CoreEase!", "*")
    ```  
 
 ---
 
-Contributing:  
-Want to add a feature or fix a bug? Contributing is simple:  
+### Contributing:  
+Want to add a feature or fix a bug? Contributing is simple:
 
 1. Fork the repository.  
 2. Clone it:  
-   `git clone https://github.com/Casbian/DoLess.git`  
+   `git clone https://github.com/Casbian/CoreEase.git`  
 3. Make your changes.  
 4. Submit a pull request.  
 
 ---
 
-License:  
-DoLess is licensed under the MIT License. Feel free to share, remix, and improve it!  
+### License:  
+CoreEase is licensed under the MIT License. Feel free to share, remix, and improve it!
 
 ---

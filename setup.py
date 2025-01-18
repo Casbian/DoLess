@@ -4,13 +4,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="DoLess",
-    version="0.1.1",
+    name="CoreEase",
+    version="0.1.2",
     author="Casbian",
     description="A Python package to standardize my workflows and simplify repetitive tasks.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Casbian/DoLess",
+    url="https://github.com/Casbian/CoreEase",
     packages=find_packages(),
     install_requires=[
         "selenium>=4.0.0",
