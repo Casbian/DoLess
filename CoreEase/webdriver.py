@@ -7,6 +7,8 @@ def StartBrowser():
     browserheadless = Options()
     browserheadless.add_argument("--headless")
     browser=webdriver.Firefox(options=browserheadless)
+def CloseBrowser():
+    browser.quit()
 def ClickButton(button):
     button.click()
 def GoToUrl(urlnewtarget):
