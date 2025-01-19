@@ -13,6 +13,9 @@ def EnumeratedPrint(list):
 def CenteredPrint(string,filler):
     console_w = ConsoleWidth()
     print(string.center(console_w, filler))
+def CenteredPrintTempLine(string,filler):
+    console_w = ConsoleWidth()
+    print(string.center(console_w, filler), end="\r")
 def CenteredInput(string):
     console_w = ConsoleWidth()
     console_lp = console_w // 2 - (len(string)+2)
