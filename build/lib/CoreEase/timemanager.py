@@ -7,6 +7,4 @@ def CalculateTimeDifferencetoTargetTime24HourFrame(targettime):
     except (ValueError, TypeError):
         return "Error try Format: str(%H:%M)"
     timedifference = targettime - currenttime
-    if timedifference.total_seconds() <= 0:
-        return False
     return timedifference

@@ -7,6 +7,10 @@ def SubmitTasktoThreadWITHLoadBuffer(task):
     future = executor.submit(task)
     LoadBuffer(future)
     return future.result()
+def SubmitTasktoThreadWITHLoadBufferNOAnimation(task):
+    future = executor.submit(task)
+    LoadBufferNOAnimation(future)
+    return future.result()
 def SubmitTasktoThreadNOLoadBuffer(task):
     future = executor.submit(task)
     return future
@@ -18,6 +22,11 @@ def LoadBuffer(future):
         print(" " * console_parts + "---" + " " * console_parts, end="\r")
         print(" " * console_parts + "--\\" + " " * console_parts, end="\r")
         print(" " * console_parts + "--|" + " " * console_parts, end="\r")
+    else:
+        print(future)
+def LoadBufferNOAnimation(future):
+    while future.done() != True:
+        pass
     else:
         print(future)
 def PassCommandtoConsole(command):
