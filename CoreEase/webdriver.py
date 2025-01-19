@@ -26,7 +26,7 @@ def OnlinePortalLoginTry(usernameentryfield,passwordentryfield,submitbutton,user
     if check1 == check0:
         return None
     else:
-        return check0
+        return True
 def DetectChangeinWebsite():
     domold = browser.page_source
     loopflag = True
