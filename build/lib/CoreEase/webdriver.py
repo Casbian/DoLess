@@ -29,11 +29,9 @@ def OnlinePortalLoginTry(usernameentryfield,passwordentryfield,submitbutton,user
         return True
 def DetectChangeinWebsite():
     domold = browser.page_source
-    loopflag = True
-    while loopflag == True:
-        domnew = browser.page_source
-        if domnew != domold:
-            loopflag = False
+    domnew = browser.page_source
+    if domnew != domold:
+        return False
     return True
 def ParseforLoginEntrysandSubmitButton():
     strusernameforsearch = "username"
@@ -100,15 +98,15 @@ def ParseforLinks():
 def ParseforButtons():
     buttonlist = []
     elementstocheck = ["button","input[type='button']","input[type='submit']","input"]
-    attributestocheck = ["onclick","id"]
+    attributestocheck = ["id"]
     for element in elementstocheck:
         x = browser.find_elements(By.CSS_SELECTOR, element)
         for y in x:
             for attribute in attributestocheck:
                 z = y.get_attribute(attribute)
                 if z != None:
-                    if y not in buttonlist:
-                        buttonlist.append(y)
                     if z not in buttonlist:
                         buttonlist.append(z)
+                    if y not in buttonlist:
+                        buttonlist.append(y)
     return buttonlist
